@@ -175,15 +175,39 @@
 # собирает ягоды с этого куста и с двух соседних с ним. Напишите программу для нахождения максимального числа ягод, 
 # которое может собрать за один заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки
 
-n = int(input())
-harv = list()
-for i in range(n):
-    x = int(input())
-    harv.append(x)
+# n = int(input())
+# harv = list()
+# for i in range(n):
+#     x = int(input())
+#     harv.append(x)
 
-temp = 0
-for i in range(n):
-    harvest = harv[i-2] + harv[i-1] + harv[i]
-    if harvest > temp:
-        temp = harvest
-print(temp)
+# temp = 0
+# for i in range(n):
+#     harvest = harv[i-2] + harv[i-1] + harv[i]
+#     if harvest > temp:
+#         temp = harvest
+# print(temp)
+
+
+# Задача 26:  Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+
+# def stepen(a, b):
+#     if b == 0:
+#         return 1
+#     return stepen(a, (b-1)) * a
+
+# a = int(input())
+# b = int(input())
+# print(stepen(a, b))
+
+# Задача 28: Напишите рекурсивную функцию sum(a, b), возвращающую сумму двух целых неотрицательных чисел. 
+# Из всех арифметических операций допускаются только +1 и -1. Также нельзя использовать циклы.
+
+def sum(a, b):
+    if b == 0:
+        return a
+    return sum((a+1), (b-1))
+
+a = int(input())
+b = int(input())
+print(sum(a, b))
